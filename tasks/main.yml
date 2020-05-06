@@ -1,0 +1,7 @@
+- name: Define passthrough patterns
+  lineinfile:
+    path: /etc/apt-cacher-ng/acng.conf
+    line: "PassThroughPattern: {{ apt_cacher_ng_passthroughpattern }}"
+  notify:
+    - restart apt-cacher-ng
+  when: apt_cacher_ng_passthroughpattern is defined

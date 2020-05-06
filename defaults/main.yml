@@ -1,0 +1,2 @@
+# Allow complete traffic
+# apt_cacher_ng_passthroughpattern: '.*'
