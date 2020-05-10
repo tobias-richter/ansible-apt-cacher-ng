@@ -1,7 +1,7 @@
 galaxy_info:
   role_name: apt_cacher_ng
   author: Tobias Richter
-  description: Ansible Role for setup and configuring apt_cacher_ng.
+  description: Ansible Role for setup and installing and configuring apt_cacher_ng using elnappo.apt_cacher_ng.
   license: Apache
   min_ansible_version: 2.7
 
