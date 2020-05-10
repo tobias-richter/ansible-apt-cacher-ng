@@ -28,6 +28,10 @@ install:
   # Create ansible.cfg with correct roles_path
   - printf '[defaults]\nroles_path=./tests/requirements/:../' > ansible.cfg
 
+  # Install dependencies
+
+  - ansible-galaxy install -r tests/requirements.yml
+
 script:
   # Run ansible-lint
   - ansible-lint .
