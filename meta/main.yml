@@ -12,4 +12,6 @@ galaxy_info:
 
 
 dependencies:
-  - elnappo.apt_cacher_ng
+  - role: elnappo.apt_cacher_ng
+    tags:
+      - dependency

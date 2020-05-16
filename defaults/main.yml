@@ -1,2 +1,4 @@
 # Allow complete traffic
 # apt_cacher_ng_passthroughpattern: '.*'
+# Empty by default
+apt_cacher_ng_precachefor: false

@@ -5,3 +5,13 @@
   notify:
     - restart apt-cacher-ng
   when: apt_cacher_ng_passthroughpattern is defined
+
+- name: Configure PrecacheFor.
+  blockinfile:
+    path: /etc/apt-cacher-ng/acng.conf
+    state: "{{ 'present' if (apt_cacher_ng_precachefor != False) else 'absent' }}"
+    marker: "# {mark} ANSIBLE MANAGED BLOCK PrecacheFor"
+    block: |
+      PrecacheFor: {{ apt_cacher_ng_precachefor }}
+  notify:
+    - restart apt-cacher-ng
