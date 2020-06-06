@@ -9,7 +9,7 @@
 - name: Configure PrecacheFor.
   blockinfile:
     path: /etc/apt-cacher-ng/acng.conf
-    state: "{{ 'present' if (apt_cacher_ng_precachefor != False) else 'absent' }}"
+    state: "{{ 'present' if (apt_cacher_ng_precachefor | bool) else 'absent' }}"
     marker: "# {mark} ANSIBLE MANAGED BLOCK PrecacheFor"
     block: |
       PrecacheFor: {{ apt_cacher_ng_precachefor }}
