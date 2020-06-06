@@ -1,4 +1,5 @@
 # Allow complete traffic
 # apt_cacher_ng_passthroughpattern: '.*'
-# Empty by default
+
+# false, when it should not be configured, otherwise see https://www.unix-ag.uni-kl.de/~bloch/acng/html/index.html for details
 apt_cacher_ng_precachefor: false
