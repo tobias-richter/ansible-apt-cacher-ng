@@ -2,7 +2,8 @@
 
 [![Build Status](https://travis-ci.org/tobias-richter/ansible-apt-cacher-ng.svg?branch=master)](https://travis-ci.org/tobias-richter/ansible-apt-cacher-ng)
 
-This roles setups a apt-cacher-ng instance using [elnappo.apt_cacher_ng](https://galaxy.ansible.com/elnappo/apt-cacher-ng)
+This role setups a apt-cacher-ng instance using
+[elnappo.apt_cacher_ng](https://galaxy.ansible.com/elnappo/apt-cacher-ng)
 and enables you to configure:
 * `passthroughpattern` and
 * `precachefor`
