@@ -1,5 +1,22 @@
 # Allow complete traffic
 # apt_cacher_ng_passthroughpattern: '.*'
 
-# false, when it should not be configured, otherwise see https://www.unix-ag.uni-kl.de/~bloch/acng/html/index.html for details
-apt_cacher_ng_precachefor: false
+# see https://www.unix-ag.uni-kl.de/~bloch/acng/html/index.html for details
+# apt_cacher_ng_precachefor:
+
+# apt_cacher_ng_proxy: http://localhost:8080
+
+# Can be 0 (disabled) or 1 (enabled)
+apt_cacher_ng_verbose_log: 0
+# Configure debug level
+apt_cacher_ng_debug: 0
+# Configure UnbufferedLogs
+apt_cacher_ng_unbuffered_logs: 0
+
+# Configuration for filepatterns, see apt-cacher-ng documentation for details
+apt_cacher_ng_vfilepatternex: (^(/\?release=[0-9]+&arch=.*|.*/RPM-GPG-KEY-examplevendor)$|(^|.*/)repodata/.*\.(yaml|yml)(\.gz|\.bz2|\.lzma|\.xz)?$)
+#apt_cacher_ng_spfilepatternex:
+apt_cacher_ng_pfilepatternex: mirrorlist.*
+#apt_cacher_ng_svfilepatternex:
+#apt_cacher_ng_wfilepatternex:
+apt_cacher_ng_centos_mirror_list_url: https://www.centos.org/download/full-mirrorlist.csv

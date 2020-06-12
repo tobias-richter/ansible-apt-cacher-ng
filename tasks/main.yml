@@ -1,17 +1,9 @@
-- name: Define passthrough patterns
-  lineinfile:
-    path: /etc/apt-cacher-ng/acng.conf
-    line: "PassThroughPattern: {{ apt_cacher_ng_passthroughpattern }}"
-  notify:
-    - restart apt-cacher-ng
-  when: apt_cacher_ng_passthroughpattern is defined
+- name: prepare centos_mirrors file
+  shell: "curl {{ apt_cacher_ng_centos_mirror_list_url}} | sed 's/^.*\"http:/http:/' | sed 's/\".*$//' | grep ^http >/etc/apt-cacher-ng/centos_mirrors"
 
-- name: Configure PrecacheFor.
-  blockinfile:
-    path: /etc/apt-cacher-ng/acng.conf
-    state: "{{ 'present' if (apt_cacher_ng_precachefor | bool) else 'absent' }}"
-    marker: "# {mark} ANSIBLE MANAGED BLOCK PrecacheFor"
-    block: |
-      PrecacheFor: {{ apt_cacher_ng_precachefor }}
+- name: Configure acng.conf.
+  template:
+    src: etc/apt-cacher-ng/acng.conf.j2
+    dest: /etc/apt-cacher-ng/acng.conf
   notify:
     - restart apt-cacher-ng
