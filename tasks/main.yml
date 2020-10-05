@@ -9,3 +9,12 @@
     dest: /etc/apt-cacher-ng/acng.conf
   notify:
     - restart apt-cacher-ng
+
+- name: Configure hostname in cronjob.
+  blockinfile:
+    path: /etc/cron.daily/apt-cacher-ng
+    insertafter: "# export HOSTNAME"
+    marker: "# {mark} ANSIBLE MANAGED BLOCK hostname"
+    block: |
+      HOSTNAME={{ apt_cacher_ng_hostname }}
+      export HOSTNAME

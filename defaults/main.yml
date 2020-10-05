@@ -20,3 +20,6 @@ apt_cacher_ng_pfilepatternex: mirrorlist.*
 #apt_cacher_ng_svfilepatternex:
 #apt_cacher_ng_wfilepatternex:
 apt_cacher_ng_centos_mirror_list_url: https://www.centos.org/download/full-mirrorlist.csv
+
+# Hostname that appears in error messages and links
+apt_cacher_ng_hostname: "{{ ansible_fqdn }}"
