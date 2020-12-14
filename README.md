@@ -1,6 +1,6 @@
 # tobias_richter.apt_cacher_ng
 
-[![Build Status](https://travis-ci.org/tobias-richter/ansible-apt-cacher-ng.svg?branch=master)](https://travis-ci.org/tobias-richter/ansible-apt-cacher-ng)
+[![Build Status](https://github.com/tobias-richter/ansible-apt-cacher-ng/workflows/CI/badge.svg)](https://github.com/tobias-richter/ansible-apt-cacher-ng/actions)
 
 This role setups a apt-cacher-ng instance using
 [elnappo.apt_cacher_ng](https://galaxy.ansible.com/elnappo/apt-cacher-ng)
