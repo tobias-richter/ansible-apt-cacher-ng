@@ -2,9 +2,9 @@
 - name: prepare centos_mirrors file
   shell: >
     curl {{ apt_cacher_ng_centos_mirror_list_url }} |
-    sed 's/^.*\"http:/http:/' |
-    sed 's/\".*$//' |
-    grep ^http >/etc/apt-cacher-ng/centos_mirrors"
+    sed 's/^.*"http:/http:/' |
+    sed 's/".*$//' |
+    grep ^http >/etc/apt-cacher-ng/centos_mirrors
   tags:
     - skip_ansible_lint
 
