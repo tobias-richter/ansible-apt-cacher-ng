@@ -16,10 +16,10 @@ apt_cacher_ng_unbuffered_logs: 0
 
 # Configuration for filepatterns, see apt-cacher-ng documentation for details
 apt_cacher_ng_vfilepatternex: (^(/\?release=[0-9]+&arch=.*|.*/RPM-GPG-KEY-examplevendor)$|(^|.*/)repodata/.*\.(yaml|yml)(\.gz|\.bz2|\.lzma|\.xz)?$)
-#apt_cacher_ng_spfilepatternex:
+# apt_cacher_ng_spfilepatternex:
 apt_cacher_ng_pfilepatternex: mirrorlist.*
-#apt_cacher_ng_svfilepatternex:
-#apt_cacher_ng_wfilepatternex:
+# apt_cacher_ng_svfilepatternex:
+# apt_cacher_ng_wfilepatternex:
 apt_cacher_ng_centos_mirror_list_url: https://www.centos.org/download/full-mirrorlist.csv
 
 # Hostname that appears in error messages and links
