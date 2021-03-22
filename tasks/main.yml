@@ -11,7 +11,7 @@
   notify:
     - restart apt-cacher-ng
 
-- name: Configure hostname in cronjob.
+- name: Configure cronjob.
   blockinfile:
     path: /etc/cron.daily/apt-cacher-ng
     insertafter: "# export HOSTNAME"
@@ -20,3 +20,7 @@
     block: |
       HOSTNAME={{ apt_cacher_ng_hostname }}
       export HOSTNAME
+      {% if apt_cacher_ng_acngreq is defined %}
+      ACNGREQ={{ apt_cacher_ng_acngreq }}
+      export ACNGREQ
+      {% endif %}

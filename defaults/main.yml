@@ -23,3 +23,6 @@ apt_cacher_ng_centos_mirror_list_url: https://www.centos.org/download/full-mirro
 
 # Hostname that appears in error messages and links
 apt_cacher_ng_hostname: "{{ ansible_fqdn }}"
+
+# Sets the ACNGREQ parameter of the cronjob, see https://www.unix-ag.uni-kl.de/~bloch/acng/html/maint.html#auto-cleanup
+# apt_cacher_ng_acngreq: ignoreTradeOff=iTO&purgeNow=pN&justRemove=Delete+unreferenced&calcSize=cs&asNeeded=an
