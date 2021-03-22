@@ -1,3 +1,4 @@
+---
 roles:
   - elnappo.apt_cacher_ng
 collections: []

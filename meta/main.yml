@@ -1,3 +1,4 @@
+---
 galaxy_info:
   role_name: apt_cacher_ng
   namespace: tobias_richter
