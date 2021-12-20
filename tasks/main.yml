@@ -21,7 +21,7 @@
     path: /etc/cron.daily/apt-cacher-ng
     insertafter: "# export HOSTNAME"
     marker: "# {mark} ANSIBLE MANAGED BLOCK hostname"
-    mode: 0644
+    mode: 0755
     block: |
       HOSTNAME={{ apt_cacher_ng_hostname }}
       export HOSTNAME
